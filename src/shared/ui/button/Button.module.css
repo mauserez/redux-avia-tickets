@@ -1,0 +1,15 @@
+.button {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-purple);
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  height: 62px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: default;
+}

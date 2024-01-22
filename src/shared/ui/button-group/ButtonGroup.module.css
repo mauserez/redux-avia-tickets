@@ -1,0 +1,36 @@
+.group {
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+
+.group > *:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.group > *:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.group > *:global(.active) {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.group > * {
+  border-radius: 0;
+  cursor: pointer;
+  max-height: 55px;
+  display: flex;
+  flex: 1;
+}
+
+.group > *:not(*:global(.active)) {
+  background-color: var(--bg-button-group);
+  color: var(--color-purple);
+}

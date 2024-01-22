@@ -1,0 +1,19 @@
+.asideFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .asideFilter {
+    display: none;
+  }
+}
+
+.checkboxGroup {
+  background-color: var(--bg-chx-group);
+}
+
+.checkboxTitle {
+  color: var(--color-purple);
+}

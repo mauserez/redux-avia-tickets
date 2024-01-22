@@ -1,0 +1,29 @@
+.searchPage {
+  display: grid;
+  grid-template-columns: 276px 1fr;
+  gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .searchPage {
+    grid-template-columns: 1fr;
+  }
+}
+
+.searchPageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+@media screen and (max-width: 430px) {
+  .searchPageContent {
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+  .searchPageContent {
+    gap: 34px;
+  }
+}

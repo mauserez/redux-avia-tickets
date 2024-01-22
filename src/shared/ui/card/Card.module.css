@@ -1,0 +1,20 @@
+/* max-width 1050px*/
+
+.card {
+  border-radius: 10px;
+  
+  background-color: #fff;
+  padding: 25px 39px;
+}
+
+@media screen and (max-width: 430px) {
+  .card {
+    padding: 38px 25px 25px 25px;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 768px) {
+  .card {
+    padding: 30px 25px 25px 25px;
+  }
+}

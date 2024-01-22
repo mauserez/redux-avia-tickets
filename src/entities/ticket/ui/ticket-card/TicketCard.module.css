@@ -1,0 +1,44 @@
+.ticketCard {
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ticketCardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticketPrice {
+  color: var(--color-purple);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 900px) {
+  .ticketPrice {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+}
+
+.smallValBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.smallValTitle {
+  color: var(--color-light-purple);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.smallVal {
+  color: var(--color-purple);
+  font-size: 16px;
+  font-weight: 500;
+}
