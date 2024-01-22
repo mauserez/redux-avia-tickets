@@ -49,12 +49,9 @@ const delay = (ms: number) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-// If you are not using async thunks you can use the standalone `createSlice`.
 export const ticketSlice = createAppSlice({
   name: "ticket",
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: create => ({
     setSettings: create.reducer(
       (state, action: PayloadAction<TicketFilterSettingsType>) => {
@@ -70,11 +67,6 @@ export const ticketSlice = createAppSlice({
       state.settings = { ...state.settings, best: action.payload };
       saveLocalSettings(state.settings);
     }),
-    // The function below is called a thunk and allows us to perform async logic. It
-    // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
-    // will call the thunk with the `dispatch` function as the first argument. Async
-    // code can then be executed and other actions can be dispatched. Thunks are
-    // typically used to make async requests.
     getTickets: create.asyncThunk(
       async (_, { getState }) => {
         const state = getState() as RootState;
@@ -108,8 +100,6 @@ export const ticketSlice = createAppSlice({
     ),
   }),
 
-  // You can define your selectors here. These selectors receive the slice
-  // state as their first argument.
   selectors: {
     selectSettings: state => state.settings,
     selectApiStatus: state => state.apiStatus,
@@ -118,20 +108,12 @@ export const ticketSlice = createAppSlice({
   },
 });
 
-// Action creators are generated for each case reducer function.
 export const { setSettings, setLimit, setOrder, getTickets } =
   ticketSlice.actions;
 
-// Selectors returned by `slice.selectors` take the root state as their first argument.
 export const {
   selectSettings,
   selectApiStatus,
   selectFilteredTickets,
   selectFilteredTicketsLeft,
 } = ticketSlice.selectors;
-
-// We can also write thunks by hand, which may contain both sync and async logic.
-// Here's an example of conditionally dispatching actions based on current state.
-export const useSettings = (name: string) => {
-  
-};

@@ -1,7 +1,6 @@
 import { TicketType } from "../types/ticketTypes";
 import { TicketFilterSettingsType } from "../slice/ticketSlice";
 
-// A mock function to mimic making an async request for data
 export const getFilteredTickets = async (
   filterSettings: TicketFilterSettingsType,
   allTickets: TicketType[],
