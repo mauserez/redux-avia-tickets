@@ -33,12 +33,14 @@ export const Checkbox = (props: CheckboxPropsType) => {
 
   return (
     <div className={`${s.checkboxWrap} ${wrapClassName}`}>
-      <input
-        className={`${checkboxTypeClass} ${checkboxColorClass} ${className}`}
-        type="checkbox"
-        {...chxProps}
-      />
-      <label className={`${labelClassName}`}>{children}</label>
+      <label className={`${s.label} ${labelClassName}`}>
+        <input
+          className={`${checkboxTypeClass} ${checkboxColorClass} ${className}`}
+          type="checkbox"
+          {...chxProps}
+        />
+        {children}
+      </label>
     </div>
   );
 };

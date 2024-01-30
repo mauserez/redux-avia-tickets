@@ -14,7 +14,7 @@ export const AsideTicketFilter = () => {
       ></TicketTransferCheckBoxGroup>
 
       <TicketCompanyCheckBoxGroup
-        title="Количество пересадок"
+        title="Компании"
         titleClassName={s.checkboxTitle}
         wrapClassName={s.checkboxGroup}
       ></TicketCompanyCheckBoxGroup>
